@@ -416,7 +416,9 @@ hr.jeweled {
 			$(document).foundation("reveal", "reflow");
 			$(document).on('opened.fndtn.reveal', '[data-reveal]', function () {
 				audioAlert();
-				displayMsg( $( this ).find(".mod-content--aside__name").html() );
+				if( $( this ).find(".mod-content--aside__name").length > 0 ){
+					displayMsg( $( this ).find(".mod-content--aside__name").html() );
+				}
 			});
 		});
 		
