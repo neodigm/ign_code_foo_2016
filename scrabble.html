@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+<!--
+http://nicholaskrause.github.io/ign_code_foo_2016/
+ _______  .__        __      ____  __.                                  
+ \      \ |__| ____ |  | __ |    |/ _|___________   __ __  ______ ____  
+ /   |   \|  |/ ___\|  |/ / |      < \_  __ \__  \ |  |  \/  ___// __ \ 
+/    |    \  \  \___|    <  |    |  \ |  | \// __ \|  |  /\___ \\  ___/ 
+\____|__  /__|\___  >__|_ \ |____|__ \|__|  (____  /____//____  >\___  >
+        \/        \/     \/         \/           \/           \/     \/ 
+			while ( !(succeed = try() ) );
+
+			nicholasthekrause@gmail.com
+			http://LittleOverLord.com/
+-->
+		<title>IGN Scrabble Logic</title>
+		<meta name="description" content="IGN is your site for Xbox One, PS4, PC, Wii-U, Xbox 360, PS3, Wii, 3DS, PS Vita &amp; iPhone games with expert reviews, news, previews, trailers, cheat codes, wiki guides &amp; walkthroughs" />
+		<link rel="shortcut icon" type="image/x-icon" href="http://media.ignimgs.com/media/ign/favicon.ico"/>
+		<link rel="apple-touch-icon" type="image/png" href="http://media.ignimgs.com/media/ign/apple-touch-icon.png"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css" type="text/css" media="all" />
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab|Architects+Daughter|Open+Sans' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css" media="all" />		
+	</head>
+	<body>
+
+		<header class="row">
+			<br>
+			<div class="columns small-12 text-center">
+				<h2 class="caption--p__architectsdaughter">Scrabble Word Calculator</h2>
+			</div>
+		</header>
+		<hr class="jeweled">
+		<section class="row">
+			<div class="columns small-12 medium-4">
+				<input id="js-best-word--input" class="radius" type="text" placeholder="Enter Letters"
+				value="MEGAMAN">
+				<br>
+				<a id="js-best-word--a" class="button alert expand radius">Find Words</a>
+			</div>
+			<div class="columns small-12 medium-4">
+				<aside class="panel secondary">
+					<h2 class="article--table_lab__roboto">Highest Points</h2>
+					<hr class="jeweled">
+					<output id="js-out-words--high" class="out-words--output">
+
+					</output>
+				</aside>
+				<aside class="panel primary">
+					<h2 class="article--table_lab__roboto">Available Words</h2>
+					<hr class="jeweled">
+					<output id="js-out-words--avail" class="out-words--output">
+
+					</output>
+				</aside>				
+			</div>
+			<div class="columns small-12 medium-4">
+				<section class="row">
+					<div class="columns small-12 text-center">
+						<img src="scrabble_points.jpg" style="width: 100%;">
+					</div>
+				</section>
+			</div>
+		</section>
+		<section class="row"><div class="columns small-12 text-center"><hr class="jeweled"><a href="http://nicholaskrause.github.io/ign_code_foo_2016"><img src="nk_lol.png"></a></div></section>
+
+	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation/foundation.min.js" async></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation/foundation.reveal.min.js" async></script>
+
+	<style>
+
+.airforce--gator {color: chucknoris;}
+
+hr { 
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(194, 186, 162, 0.75), rgba(0, 0, 0, 0));
+}
+hr.jeweled {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(248, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+.horz-spacer {max-height: 12px;}
+.fa {color: #ff0000;}
+.caption--p__architectsdaughter{
+	font-family: "Architects Daughter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.1em;
+	font-weight: 400;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.caption--p__roboto{
+	font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.4em;
+	font-weight: 500;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.caption--p__opensans{
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.article--table_lab__roboto{
+	color: #BC8213;	
+	font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: center;
+	font-size: 16px;
+	font-weight: normal;
+	margin: 2px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+p>span{
+	color: #FF6666;	
+	font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: center;
+	font-size: 18px;
+	font-weight: normal;
+	margin: 4px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+	</style>
+<script>
+	'use strict';
+	$(document).ready(function(){
+		$("#js-best-word--a").on("click", function(){
+			$(".out-words--output").html(" ");
+			var nWCount = 0, nWCountHi = 0, sWHi="";
+			//    Cycle through word list
+			for(var nCnt=0; nCnt < dict_words.length; nCnt++){
+				if( isEveryLetterIn( $("#js-best-word--input").val().toLowerCase(), dict_words[nCnt]) ){
+					nWCount++;
+					var nPoints = getPointsWord( dict_words[nCnt] );
+					if( nPoints > nWCountHi ){
+						//  New high point value
+						nWCountHi = nPoints;
+						sWHi = dict_words[nCnt];
+					}
+					var sMU  = "<p>";
+					sMU += dict_words[nCnt];
+					sMU += " <span>" + nPoints + "</span>";
+					sMU += "</p>";
+					$("#js-out-words--avail").html( $("#js-out-words--avail").html() + sMU );
+				}
+			}
+			if( nWCount === 0 ){
+				alert("Dude, buy a vowel.  No matching words.");
+			}else{
+				var sMU  = "<p>";
+				sMU += sWHi;
+				sMU += " <span>" + nWCountHi + "</span>";;
+				sMU += "</p>";
+				$("#js-out-words--high").html( $("#js-out-words--high").html() + sMU );
+			}
+		});
+	});
+	var isEveryLetterIn = function(sScrabble, sDict_word){
+		//    True if every letter in sDict_word exists in sScrabble
+		for(var nCnt=0;nCnt < sDict_word.length; nCnt++ ){
+			if( sScrabble.indexOf( sDict_word[nCnt] ) === -1 ){
+				return false;
+			}
+		}
+		return true;
+	}
+	var getPointsWord = function( w ){
+		//
+		var nWPoints = 0;
+		for(var nCnt=0;nCnt < w.length; nCnt++ ){
+			nWPoints = nWPoints + getPointsLetter( w[nCnt] );
+		}
+		return nWPoints;
+	}
+	var getPointsLetter = function( l ){
+		//
+		for(var nCnt=0;nCnt < point_letters.length; nCnt++ ){
+			if( point_letters[nCnt] === l.toUpperCase() ){
+				return point_vallues[nCnt];
+			}
+		}
+		return 0;
+	}
+	var dict_words = ["achievement", "acid", "act", "action", "adventure", "allspark", "ammo", "arpg", "assassin", "asteroid", "autosave", "avatar", "avenger", "beta", "blade", "blast", "block", "blood", "boss", "buff", "bullet", "buster", "checkpoint", "cheese", "chrono", "claptrap", "class", "closed", "console", "controller", "cooldown", "corruption", "counter", "cover", "cpu", "crafting", "creed", "crouch", "crpg", "cutscene", "cutting", "damage", "difficulty", "dig", "dlc", "dodge", "doublejump", "drm", "dungeon", "dweller", "early", "edge", "emergent", "endings", "episodic", "escort", "esports", "event", "exclusive", "exploit", "explosion", "fall", "farm", "farming", "fasttravel", "field", "fight", "finished", "fireball", "fog", "free", "game", "ganon", "gauntlet", "gem", "generation", "ghost", "god", "gpu", "grenade", "griefer", "grinding", "gun", "halo", "hardmode", "healer", "health", "horror", "ifrit", "indie", "infinity", "instance", "invader", "joystick", "jrpg", "jump", "keyblade", "keyboard", "kill", "lag", "lane", "leroy", "level", "lightning", "link", "live", "ludology", "mage", "magus", "mana", "mario", "masamune", "master", "matchmaking", "materia", "megaman", "microtransactions", "middleware", "midgar", "mission", "mmorpg", "mob", "moba", "mode", "monster", "mouse", "mouselook", "multiple", "myst", "nerf", "nintendo", "noob", "npc", "nvidia", "openworld", "optimus", "overpowered", "overshield", "pacman", "pass", "pellet", "permadeath", "persistent", "pickaxe", "pierce", "pixel", "plasma", "play", "poison", "port", "potion", "procedural", "puzzle", "pve", "pvp", "quest", "quick", "raid", "realtime", "replay", "retrogaming", "rig", "rocket", "roguelike", "romance", "rpg", "season", "shield", "shoot", "shovel", "simulator", "sli", "sliding", "smash", "souls", "spawn", "speedrun", "spread", "sprint", "stealth", "strategy", "streak", "summon", "super", "survival", "sword", "system", "tactics", "tank", "tesseract", "theory", "time", "touchscreen", "triforce", "uppercut", "vault", "walljump", "war", "warrior", "wasd", "wasteland", "world", "zelda", "zombie"];
+
+	var point_letters = ["A", "E", "I", "O", "U", "L", "N", "S", "T", "R", "D", "G", "B", "C", "M", "P", "F", "H", "V", "W", "Y", "K", "J", "X", "Q", "Z"];
+	var point_vallues = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 8, 8, 10, 10];
+</script>
+</html>

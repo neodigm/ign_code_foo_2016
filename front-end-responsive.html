@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<!--
+
+http://nicholaskrause.github.io/ign_code_foo_2016/
+ _______  .__        __      ____  __.                                  
+ \      \ |__| ____ |  | __ |    |/ _|___________   __ __  ______ ____  
+ /   |   \|  |/ ___\|  |/ / |      < \_  __ \__  \ |  |  \/  ___// __ \ 
+/    |    \  \  \___|    <  |    |  \ |  | \// __ \|  |  /\___ \\  ___/ 
+\____|__  /__|\___  >__|_ \ |____|__ \|__|  (____  /____//____  >\___  >
+        \/        \/     \/         \/           \/           \/     \/ 
+			while ( !(succeed = try() ) );
+
+			nicholasthekrause@gmail.com
+			http://LittleOverLord.com/
+-->
+		<title>IGN Articles and Videos | Nick Krause</title>
+		<meta name="description" content="IGN is your site for Xbox One, PS4, PC, Wii-U, Xbox 360, PS3, Wii, 3DS, PS Vita &amp; iPhone games with expert reviews, news, previews, trailers, cheat codes, wiki guides &amp; walkthroughs" />
+
+		<link rel="shortcut icon" type="image/x-icon" href="http://media.ignimgs.com/media/ign/favicon.ico"/>
+		<link rel="apple-touch-icon" type="image/png" href="http://media.ignimgs.com/media/ign/apple-touch-icon.png"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css" type="text/css" media="all" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Architects+Daughter|Open+Sans" rel="stylesheet" type='text/css'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css" media="all" />
+	</head>
+	<body>
+		<header class="row">
+			<br>
+			<nav class="columns small-12 text-center">
+				<div class="navtog--div__min">
+					<ul class="button-group round even-3">
+					  <li><a class="navtog--a button alert" data-action="art">ARTICLES</a></li>
+					  <li><a class="navtog--a navtog--a__active button alert" data-action="vid">VIDEOS</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<div class="catg--div catg--div__articles hide"></div>
+		<div class="catg--div catg--div__videos"></div>
+		<section class="row"><div class="columns small-12"><hr class="jeweled"></div></section>
+		<section class="row">
+			<div class="columns small-1">&nbsp;</div>
+			<div class="columns small-9">
+				<a class="view-more--a button expand alert">View More ...</a>
+			</div>
+			<div class="columns small-1">&nbsp;</div>
+		</section>
+		<section id="mod_loading" class="reveal-modal small" data-reveal>
+			<section class="row"><div class="columns small-12"><hr class="jeweled"></div></section>
+			<section class="row">
+				<div class="columns small-12 text-center">
+					<p class="text-center">
+						<img src="mod_loading.gif" alt="loading">
+					</p>
+				</div>
+			</section>
+			<section class="row"><div class="columns small-12"><hr class="jeweled"></div></section>
+		</section>
+
+		<section class="row"><div class="columns small-12 text-center"><hr class="jeweled"><a href="http://nicholaskrause.github.io/ign_code_foo_2016"><img src="nk_lol.png"></a></div></section>
+	
+<!--  Begin Templates -->
+<template id="js-catg--templ__articles">
+		<section class="mcard-sm--sect row panel" data-reveal-id="mod_|catg|_|id|">
+<style>#mcard-sm--artc__|catg|_|id|{
+transition:all 0.5s;
+-webkit-transition:all 0.5s;
+-o-transition:all 0.5s;
+-moz-transition:all 0.5s;
+background-size:550px 550px;
+background-position:-50px -50px;
+}
+#mcard-sm--artc__|catg|_|id|:hover{
+background-size:450px 450px;
+background-position:0px 0px;
+}</style>
+			<article id="mcard-sm--artc__|catg|_|id|" class="mcard-sm--artc columns small-12 show-for-small-only" data-thumb="|thumbnail|">
+				<section class="mcard-sm--row row">
+					<div class="columns small-1">
+						<output class="mcard-sm--output__item">|id|</output>
+					</div>
+					<div class="columns small-9">
+						<section class="row">
+							<div class="columns small-12">
+								<aside class="mcard-sm--aside__name">|headline|</aside>
+							</div>
+							<div class="columns small-12">
+								<aside class="mcard-sm--aside__desc">|subHeadline|</aside>
+							</div>
+						</section>
+					</div>
+					<div class="columns small-1">
+						<aside class="mcard-sm--aside__duration">|publishDate|</aside>
+					</div>
+				</section>
+			</article>
+			<article class="columns small-12 show-for-medium-up">
+				<section class="row">
+					<div class="columns medium-1">
+						<output class="mcard-sm--output__item">|id|</output>
+					</div>
+					<div class="columns medium-7">
+						<section class="row">
+							<div class="columns small-12">
+								<aside class="mcard-md--aside__name">|headline|</aside>
+							</div>
+							<div class="columns small-12">
+								<aside class="mcard-md--aside__desc">|subHeadline|</aside>
+							</div>
+						</section>
+					</div>
+					<div class="columns medium-4">
+						<section class="row">
+							<div class="columns small-12" style="padding-right: 0px;">
+								<img class="mod-content--img" src="|thumbnail|">
+							</div>
+						</section>
+					</div>
+				</section>
+			</article>
+		</section>
+		<section id="mod_|catg|_|id|" class="reveal-modal small" data-reveal>
+			<a class="close-reveal-modal close-button" aria-label="Close"><p><i class="fa fa-lg fa-times-circle-o"></i></p></a>
+			<section class="row"><div class="columns small-12"><hr class="jeweled"></div></section>
+			<section class="row">
+				<div class="columns small-12">
+					<img class="mod-content--img" src="|thumbnail|">
+				</div>
+			</section>
+			<section class="row"><div class="columns small-12"><hr class="jeweled"></div></section>
+			<section class="row">			
+				<div class="columns small-12">
+					<section class="row">
+						<div class="columns small-12">
+							<aside class="mod-content--aside__name">|headline|</aside>
+						</div>
+						<div class="columns small-12">
+							<aside class="mod-content--aside__desc">|subHeadline|</aside>
+						</div>
+					</section>
+				</div>
+			</section>
+			<section class="row"><div class="columns small-12"><hr class="jeweled"></div></section>
+			<section class="row">			
+				<div class="mod-content--div__social columns small-12 text-center">
+ 					<i class="fa fa-lg fa-pinterest "></i>&nbsp;
+ 					<i class="fa fa-lg fa-twitter"></i>&nbsp;
+ 					<i class="fa fa-lg fa-thumbs-o-up"></i>&nbsp;
+ 					<i class="fa fa-lg fa-heart"></i>
+				</div>
+			</section>
+		</section>
+</template>
+
+<template id="js-catg--templ__videos">
+		<section class="mcard-sm--sect row panel" data-reveal-id="mod_|catg|_|id|">
+<style>#mcard-sm--artc__|catg|_|id|{
+transition:all 0.5s;
+-webkit-transition:all 0.5s;
+-o-transition:all 0.5s;
+-moz-transition:all 0.5s;
+background-size:550px 550px;
+background-position:-50px -50px;
+}
+#mcard-sm--artc__|catg|_|id|:hover{
+background-size:450px 450px;
+background-position:0px 0px;
+}</style>
+			<article id="mcard-sm--artc__|catg|_|id|" class="mcard-sm--artc columns small-12 show-for-small-only" data-thumb="|thumbnail|">
+				<section class="mcard-sm--row row">
+					<div class="columns small-1">
+						<output class="mcard-sm--output__item">|id|</output>
+					</div>
+					<div class="columns small-9">
+						<section class="row">
+							<div class="columns small-12">
+								<aside class="mcard-sm--aside__name">|name|</aside>
+							</div>
+							<div class="columns small-12">
+								<aside class="mcard-sm--aside__desc">|description|</aside>
+							</div>
+						</section>
+					</div>
+					<div class="columns small-1">
+						<aside class="mcard-sm--aside__duration">|publishDate|</aside>
+					</div>
+				</section>
+
+			</article>		
+			<article class="columns small-12 show-for-medium-up">
+				<section class="row">
+					<div class="columns medium-1">
+						<output class="mcard-sm--output__item">|id|</output>
+					</div>
+					<div class="columns medium-7">
+						<section class="row">
+							<div class="columns small-12">
+								<aside class="mcard-md--aside__name">|name|</aside>
+							</div>
+							<div class="columns small-12">
+								<aside class="mcard-md--aside__desc">|description|</aside>
+							</div>
+						</section>
+					</div>
+					<div class="columns medium-4">
+						<section class="row">
+							<div class="columns small-12" style="padding-right: 0px;">
+								<img class="mod-content--img" src="|thumbnail|">
+							</div>
+						</section>
+					</div>
+				</section>
+			</article>
+		</section>
+		<section id="mod_|catg|_|id|" class="reveal-modal small" data-reveal>
+			<a class="close-reveal-modal close-button" aria-label="Close"><p><i class="fa fa-lg fa-times-circle-o"></i></p></a>
+			<section class="row"><div class="columns small-12"><hr class="jeweled"></div></section>
+			<section class="row">
+				<div class="columns small-12">
+					<img class="mod-content--img" src="|thumbnail|">
+				</div>
+				<div class="columns small-12">
+					<a href="|url|" class="button expand secondary" target="_blank"><i class="fa fa-2x fa-play"></i></a>
+				</div>
+			</section>
+			<section class="row"><div class="columns small-12"><hr class="jeweled"></div></section>
+			<section class="row">			
+				<div class="columns small-12">
+					<section class="row">
+						<div class="columns small-12">
+							<aside class="mod-content--aside__name">|name|</aside>
+						</div>
+						<div class="columns small-12">
+							<aside class="mod-content--aside__desc">|description|</aside>
+						</div>
+					</section>
+				</div>
+			</section>
+			<section class="row"><div class="columns small-12"><hr class="jeweled"></div></section>
+			<section class="row">			
+				<div class="mod-content--div__social columns small-12 text-center">
+ 					<i class="fa fa-lg fa-pinterest "></i>&nbsp;
+ 					<i class="fa fa-lg fa-twitter"></i>&nbsp;
+ 					<i class="fa fa-lg fa-thumbs-o-up"></i>&nbsp;
+ 					<i class="fa fa-lg fa-heart"></i>
+				</div>
+			</section>
+		</section>
+</template>
+
+	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation/foundation.min.js" async></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation/foundation.reveal.min.js" async></script>
+
+	<style>
+.airforce--gator {color: chucknoris;}
+.navtog--div__min {
+	min-width: 320px;
+}
+.navtog--a {
+	background-color: #FFFFFF !important;
+	color: #FF0000  !important;
+	border: solid 2px #FF0000 !important;
+} 
+.navtog--a__active {
+	background-color: #FF0000 !important;
+	color: #FFFFFF !important;
+}
+.mcard-sm--sect {
+	padding: 0;
+	border-width: 0 0 1px 4px;
+	border-left-color: #FFFFFF;
+	background-color: #FFFFFF;
+	margin-bottom: 0;
+	cursor: pointer;
+}
+.mcard-sm--sect:hover {
+	border-left-color: #FF0000;
+}
+.mcard-sm--row {
+	margin: 18px !important;
+	min-height: 64px;
+}
+.mcard-sm--aside__desc{
+	color: #999999;
+	height: 28px;
+	overflow: hidden;
+}
+.mcard-sm--aside__duration{
+	font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: .6em;
+	font-weight: 100;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.mcard-md--aside__name{
+	font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.4em;
+	font-weight: 400;
+	line-height: 1.1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: #FF4444;
+}
+.mcard-md--aside__desc{
+	font-family: "Architects Daughter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.2em;
+	font-weight: 400;
+	line-height: 1.4;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: #999999;
+	height: 56px;
+	overflow: hidden;
+}
+.mcard-sm--artc:hover .mcard-sm--output__item { color: #FFFFFF; }
+.mcard-sm--artc:hover .mcard-sm--aside__name { color: #FFFFFF; }
+.mcard-sm--artc:hover .mcard-sm--aside__desc { color: #CCCCCC; }
+.mcard-sm--artc:hover .mcard-sm--aside__duration { color: #FFFFFF; }
+.mod-content--aside__name {
+	font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.4em;
+	font-weight: 500;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.mod-content--aside__desc {
+	font-family: "Architects Daughter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.1em;
+	font-weight: 400;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;	
+}
+.mod-content--div__social{
+	cursor: pointer;
+}
+.mod-content--img {
+	width: 100%;
+}
+hr { 
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(194, 186, 162, 0.75), rgba(0, 0, 0, 0));
+}
+hr.jeweled {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(248, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+.fa {color: #ff0000;}
+	</style>
+	<script>
+		'use strict';
+		var oAudContx = new AudioContext();    //    HTML5 Audio
+		var jsCnfg = {
+			base_url : "http://ign-apis.herokuapp.com/",
+			data_incr : 10,
+			count_artc : 0,
+			count_vid :0,
+			articles : "articles",
+			videos : "videos"
+		};//  App config
+
+		var jsModel = {
+			art : function() {
+				$(".catg--div").toggleClass("hide");
+			},
+			vid : function() {
+				$(".catg--div").toggleClass("hide");
+			}
+		};//  App state
+
+		$(document).ready(function(){
+			$(".navtog--a").on("click", function( e ){
+				if(!$(this).hasClass("navtog--a__active")){
+					$(".navtog--a").toggleClass("navtog--a__active");//TODO A11Y
+					jsModel[$(this).attr("data-action")]();
+					audioBleep_1();
+				}
+				e.preventDefault();
+			});
+
+			$(".view-more--a").on("click", function( e ){
+				//  View More Button Click Handler | Fetch x more cards
+				$(".catg--div").html(" ");
+				$("#mod_loading").foundation("reveal", "open");
+				$("#mod_loading i").css("display","inline-block");
+				jsFetch.getNext(jsCnfg.videos, function(){
+					mediaCards.getMU(jsCnfg.videos);
+					jsFetch.getNext(jsCnfg.articles, function(){
+						mediaCards.getMU(jsCnfg.articles);	
+						$("#mod_loading").foundation("reveal", "close");
+						$('html, body').animate({
+						scrollTop: $(".view-more--a").offset().top
+						}, 964);
+						audioSuccessSound();
+					});			
+				});
+				e.preventDefault();
+			});
+		});
+
+		$(document).bind("ajaxComplete", function(){
+			//  Reflow RWD framework
+			$(document).foundation();
+			$( ".mcard-sm--artc" ).mouseenter(function() {
+				$( this ).css("background-image", "url(" + $( this ).attr("data-thumb") + ") ");
+			}).mouseleave(function() {
+				$( this ).css("background-image", "none");
+			});
+			$(document).foundation("reveal", "reflow");
+			$(document).on('opened.fndtn.reveal', '[data-reveal]', function () {
+				audioAlert();
+				displayMsg( $( this ).find(".mod-content--aside__name").html() );
+			});
+		});
+		
+		var jsFetch = {
+			nCrdBatchCnt : 0,
+			getNext : function( catg, cb ){
+				//  Get JSON by category and package as DTO, fire callback when done
+				var oCntr = this;
+				oCntr.catg = catg, oCntr.cb = cb;
+				var uTarget = jsCnfg.base_url + catg + "?startIndex="+((oCntr.nCrdBatchCnt++)*jsCnfg.data_incr)+"&count="+jsCnfg.data_incr+"&callback=?";
+				$.getJSON( uTarget, function( jsn ){
+					//   JSON is done and ready to be eaten
+					$.each( jsn.data, function( key, val ) {
+						var meta = val.metadata, sId;
+						if( jsCnfg.articles === oCntr.catg ){ 
+							sId = (++jsCnfg.count_artc); //  Increment article
+						}else{ 
+							sId = (++jsCnfg.count_vid); //  Increment video
+						}
+						//    Format number
+						if( String( sId ).length <= 2){ sId = String("0" + sId).slice(-2); } 
+						//    Create content media cards
+						mediaCards.addCard( new MediaCard(sId, oCntr.catg, meta.description, meta.duration, meta.longTitle, meta.name , meta.publishDate, val.thumbnail, meta.title, meta.url, meta.headline, meta.headerImageUrl, meta.subHeadline) );
+					});
+					oCntr.cb(); //  McCallback
+				}).error(function() { alert("Cannot reach IGN API"); });
+			}
+		}
+
+		function MediaCard(id, catg, description, duration, longTitle, name, publishDate, thumbnail, title, url, headline, headerImageUrl, subHeadline){
+			//    vid
+			this.id = id;
+			this.catg = catg;
+			this.description = description;
+			this.duration = duration;
+			this.longTitle = longTitle;
+			this.name = name;
+			this.publishDate = publishDate.substr(5, 2)+"/"+publishDate.substr(0, 4);
+			this.thumbnail = thumbnail;
+			this.title = title;
+			this.url = url;
+			//    arc
+			this.headline = headline;
+			this.headerImageUrl = headerImageUrl;
+			this.subHeadline = subHeadline;
+			try  {
+				//    Offline Storage
+				localStorage.setItem(catg + "_" + id, JSON.stringify( this ) );
+			} catch (e) { }
+		}
+
+		function MediaCards(){
+			//    Cards Collection Singleton
+			this.amediaCard = [];
+			this.addCard = function( oCard ){
+				this.amediaCard.push( oCard );
+			};
+			this.getMU = function( catg ){
+				this.catg = catg;
+				for(var nCnt=0; nCnt < this.amediaCard.length; nCnt++){
+					if(this.amediaCard[nCnt].catg === this.catg){
+						//    Return only requested category - Video or Article
+						var aCard =[];
+						var oCard = this.amediaCard[nCnt];
+							aCard.push( {"target":"id", "source":oCard.id} );
+							aCard.push( {"target":"catg", "source":oCard.catg} );
+							aCard.push( {"target":"name", "source":oCard.name} );
+							aCard.push( {"target":"description", "source":oCard.description} );
+							aCard.push( {"target":"duration", "source":oCard.duration} );
+							aCard.push( {"target":"headline", "source":oCard.headline} );
+							aCard.push( {"target":"headerImageUrl", "source":oCard.headerImageUrl} );
+							aCard.push( {"target":"subHeadline", "source":oCard.subHeadline} );
+							aCard.push( {"target":"publishDate", "source":oCard.publishDate} );
+							aCard.push( {"target":"thumbnail", "source":oCard.thumbnail} );
+							aCard.push( {"target":"url", "source":oCard.url} );
+						var sMU = popuTemplate("js-catg--templ__"+ this.catg, aCard);
+						$(".catg--div__" + this.catg).html( $(".catg--div__" + this.catg).html() + sMU );
+					}
+				}
+			};
+		}
+
+		function popuTemplate(sTemplate_id, aContents){
+			//    Return a string after swapping an assn array (objects)
+			//    replacing pipe delm tokens in the template html
+			//    If all the tokens have been replaced but there is still data in 
+			//    the contents array then get a another copy of the template.
+
+			if( aContents.length > 0){
+				var $oTempl = $("#" + sTemplate_id);
+				var sMUout = ""; //    Might contain more than one template html
+				var sMUprc = $oTempl.html(); //    In process string
+				for(var iC=0; iC < aContents.length; iC++){
+					sMUprc = sMUprc.split( ("|"+aContents[iC].target+"|") ).join( aContents[iC].source );
+				}
+				sMUout += sMUprc;
+				return sMUout;
+			}else{
+				return "";
+			}
+		}
+
+		function displayMsg( sMsg ){
+			//    System Tray Notification
+			console.log( sMsg );
+			if (!("Notification" in window)) {
+			console.log('Notification API not supported.');
+			return;
+			} else if (Notification.permission === "granted") {
+			//    If it's okay let's create a notification
+			audioSuccessSound();
+			        var notification = new Notification( sMsg );
+			} else if (Notification.permission !== 'denied') {
+			//    Otherwise, we need to ask the user for permission
+			Notification.requestPermission(function (permission) {
+			    //    If the user accepts, let's create a notification
+			    if (permission === "granted") {
+			        var notification = new Notification( sMsg );
+			    }
+			});
+			}
+		}
+
+		//  App Init
+		var mediaCards = new MediaCards();
+		jsFetch.getNext(jsCnfg.videos, function(){
+			mediaCards.getMU(jsCnfg.videos);
+			jsFetch.getNext(jsCnfg.articles, function(){
+				mediaCards.getMU(jsCnfg.articles);	
+			});			
+		});
+
+		function audioSuccessSound() {
+		    playNote(493.883, oAudContx.currentTime,  0.12);
+		    playNote(659.255, oAudContx.currentTime + 0.12, 0.24);
+		};
+
+		function audioBleep_1() {
+		    playNote(800, oAudContx.currentTime + 0.0, 0.20);
+		};
+
+		function audioAlert() {
+		    //
+		    playNote(300, oAudContx.currentTime,  0.03);
+		    playNote(400, oAudContx.currentTime + 0.03, 0.06);
+		};
+
+		function playNote(frequency, startTime, duration) {
+		    if( localStorage.getItem("sound_switch") !== "false" ){
+		        var osc = oAudContx.createOscillator(),
+		            osc2 = oAudContx.createOscillator(),
+		            volume = oAudContx.createGain();
+
+		        volume.gain.value = 0.16;
+		        volume.gain.setValueAtTime(0.16, startTime + duration - 0.04);
+		        volume.gain.linearRampToValueAtTime(0, startTime + duration);
+
+		        osc.frequency.value = frequency;
+		        osc.type = 'triangle';
+
+		        osc2.frequency.value = frequency;
+		        osc2.type = 'triangle';
+
+		        osc.detune.value = -16;
+		        osc2.detune.value = 16;
+
+		        osc.connect(volume);
+		        volume.connect(oAudContx.destination);
+
+		        osc2.connect(volume);
+
+		        osc.start(startTime);
+		        osc.stop(startTime + duration);
+
+		        osc2.start(startTime);
+		        osc2.stop(startTime + duration);
+		    }
+		};
+	</script>
+</html>
